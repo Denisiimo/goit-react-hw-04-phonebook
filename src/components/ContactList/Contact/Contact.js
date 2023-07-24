@@ -10,6 +10,7 @@ export const Contact = ({ contact: { id, name, number }, onDelete }) => {
 };
 
 Contact.propTypes = {
+  onDelete: PropTypes.func.isRequired,
   contact: PropTypes.exact({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,

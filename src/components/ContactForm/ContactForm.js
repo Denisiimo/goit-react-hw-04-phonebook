@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Form, Label, BtnForm, InputForm } from './ContactForm.styled';
+import PropTypes from 'prop-types';
 
 export const ContactForm = ({ onSubmit }) => {
   const [name, setName] = useState('');
@@ -55,4 +56,8 @@ export const ContactForm = ({ onSubmit }) => {
       <BtnForm type="submit">Add contact</BtnForm>
     </Form>
   );
+};
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };
